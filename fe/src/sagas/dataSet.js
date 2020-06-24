@@ -1,9 +1,7 @@
 import { takeEvery, put, call, select } from 'redux-saga/effects';
 import {
   REQUEST_DATA_SET,
-  RECEIVE_DATA_SET,
   INJECT_NEW_DATA,
-  RECORD_COMPUTATION,
   receiveDataSet,
 } from 'actions/dataSet';
 import getMean from 'utilities/getMean';

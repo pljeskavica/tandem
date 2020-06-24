@@ -1,9 +1,4 @@
-import {
-  REQUEST_DATA_SET,
-  RECEIVE_DATA_SET,
-  INJECT_NEW_DATA,
-  RECORD_COMPUTATION,
-} from 'actions/dataSet';
+import { REQUEST_DATA_SET, RECEIVE_DATA_SET } from 'actions/dataSet';
 
 const initialState = {
   loading: false,
