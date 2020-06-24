@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getDataSet } from 'actions/dataSet';
 import DataSetTile from 'components/DataSetTile';
 import { calculationSelector } from 'selectors/dataSet';
+import DataSetInput from 'components/DataSetInput';
+import GetNewDataSetButton from 'components/GetNewDataSetButton';
 
 const DataSetContainer = () => {
   const dispatch = useDispatch();
@@ -11,7 +13,13 @@ const DataSetContainer = () => {
     dispatch(getDataSet());
   }, [dispatch]);
 
-  return <DataSetTile data={data} />;
+  return (
+    <React.Fragment>
+      <DataSetTile data={data} />
+      <GetNewDataSetButton />
+      <DataSetInput />
+    </React.Fragment>
+  );
 };
 
 export default DataSetContainer;

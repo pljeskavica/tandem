@@ -7,7 +7,6 @@ const useStyles = makeStyles({
   root: {
     display: 'grid',
     placeItems: 'center',
-    backgroundColor: '#282c34',
     height: '100vh',
   },
 });

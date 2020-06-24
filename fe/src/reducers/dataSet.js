@@ -8,6 +8,7 @@ import {
 const initialState = {
   loading: false,
   error: false,
+  dataIndex: 0,
   data: [],
   mean: null,
   median: null,
@@ -24,7 +25,14 @@ const dataSetReducer = (state = initialState, action) => {
         loading: true,
       };
     case RECEIVE_DATA_SET:
-      const { mean, median, standardDeviation, mode, data } = action;
+      const {
+        mean,
+        median,
+        standardDeviation,
+        mode,
+        data,
+        dataIndex,
+      } = action;
       return {
         ...state,
         loading: false,
@@ -33,14 +41,7 @@ const dataSetReducer = (state = initialState, action) => {
         median,
         standardDeviation,
         mode,
-      };
-    case INJECT_NEW_DATA:
-      return {
-        data: [...state.data, action.number],
-        mean: null,
-        median: null,
-        standardDeviation: null,
-        mode: null,
+        dataIndex,
       };
 
     default:

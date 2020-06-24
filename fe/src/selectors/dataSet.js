@@ -11,3 +11,8 @@ export const calculationSelector = createSelector(
     median,
   })
 );
+
+export const dataIndexSelector = createSelector(
+  dataSet,
+  ({ dataIndex }) => dataIndex
+);
